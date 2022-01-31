@@ -1,0 +1,64 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #00007f;
+}
+
+header img {
+  max-height: 80%;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 20px;
+}
+
+footer {
+  margin-top: auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #00007f;
+}
+
+footer p {
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+
+main a {
+  text-decoration: none;
+  color: #00007f;
+}
+
+main .date {
+  font-size: 0.8em;
+  color: #7f7f7f;
+}
+
+main article {
+  margin-bottom: 20px;
+}

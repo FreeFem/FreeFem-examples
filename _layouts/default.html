@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="{{ site.url }}/assets/css/vs.css">
-    </head>
-    <body>
-        <!-- {% include header.html %} -->
-        <main>
-            {% for doc in site.docs %}
-            <article>
-                <h4><a href="{{ site.url }}{{ doc.url }}">{{ doc.title }}</a></h4>
-                <p class="grey-text">{{ doc.date | date_to_string }}</p>
-                {{ doc.content | strip_html | truncatewords: 50 }}
-                <a href="{{ site.url }}{{ doc.url }} ">Lire la suite...</a>
-                {% if forloop.last %}
-                {% else %}
-                    <hr />
-                {% endif %}
-            </article>
-            {% endfor %}
-        </main>
-        <!-- {% include footer.html %} -->
-    </body>
+  <head>
+    <title>FreeFEM examples</title>
+
+    {% include head_includes.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main>
+      {% for doc in site.docs %}
+      <article>
+        <h2><a href="{{ site.url }}{{ doc.url }}">{{ doc.title }}</a></h2>
+        <p class="date">{{ doc.date | date_to_string }}</p>
+        {{ doc.content | strip_html | truncatewords: 50 }}
+        <a href="{{ site.url }}{{ doc.url }} ">See more...</a>
+        {% if forloop.last %} {% else %}
+        <hr />
+        {% endif %}
+      </article>
+      {% endfor %}
+    </main>
+    {% include footer.html %} {% include mathjax.html %}
+  </body>
 </html>

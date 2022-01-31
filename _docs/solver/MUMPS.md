@@ -32,3 +32,12 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 {% highlight freefem %}
 {% flexible_include examples/solver/MUMPS.edp %}
 {% endhighlight %}
+
+MathJax inline example:
+$\Omega_h$
+
+MathJax block example:
+
+$$
+\int_{\Omega}(dx)
+$$

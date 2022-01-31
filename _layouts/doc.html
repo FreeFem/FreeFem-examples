@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="{{ site.url }}/assets/css/vs.css">
-    </head>
-    <body>
-        <!-- {% include header.html %} -->
-        <main class="post">
-            <h4>{{ page.title }}</h4>
-            {{ content }}
-        </main>
-        <!-- {% include footer.html %} -->
-    </body>
+  <head>
+    <title>FreeFEM examples</title>
+
+    {% include head_includes.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main>
+      <h2>{{ page.title }}</h2>
+      {{ content }}
+    </main>
+    {% include footer.html %} {% include mathjax.html %}
+  </body>
 </html>
