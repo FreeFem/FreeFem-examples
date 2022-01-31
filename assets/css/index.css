@@ -41,6 +41,12 @@ footer {
 
 footer p {
   padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+footer p > img {
+  padding: 5px;
 }
 
 main {
