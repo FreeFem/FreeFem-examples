@@ -8,10 +8,45 @@
   <body>
     {% include header.html %}
     <main>
+      <div class="filters">
+        <!-- Categories -->
+        <div id="categories">
+          {% for doc in site.docs %}
+          <script>
+            addCategory("{{ doc.category }}");
+          </script>
+          {% endfor %}
+          <script>
+            setCategories();
+          </script>
+        </div>
+
+        <!-- Search -->
+        <div id="search">
+          <input type="search" placeholder="Search..." />
+          <button>
+            <img src="/assets/img/magnifying-glass.svg" alt="search" />
+          </button>
+          <div id="search-results"></div>
+        </div>
+      </div>
+      <script>
+        initSearch();
+      </script>
+
+      <!-- Content -->
       {% for doc in site.docs %}
       <article>
         <h2><a href="{{ site.url }}{{ doc.url }}">{{ doc.title }}</a></h2>
-        <p class="date">{{ doc.date | date_to_string }}</p>
+        <div class="subtitle">
+          <p class="category">
+            <strong>Category:</strong> {{ doc.categories }}
+          </p>
+          <p class="tags"><strong>Tags:</strong> {{ doc.tags }}</p>
+          <p class="date">
+            <strong>Data:</strong> {{ doc.date | date_to_string }}
+          </p>
+        </div>
         {{ doc.content | strip_html | truncatewords: 50 }}
         <a href="{{ site.url }}{{ doc.url }} ">See more...</a>
         {% if forloop.last %} {% else %}
@@ -20,6 +55,6 @@
       </article>
       {% endfor %}
     </main>
-    {% include footer.html %} {% include mathjax.html %}
+    {% include footer.html %}
   </body>
 </html>
