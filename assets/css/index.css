@@ -124,7 +124,8 @@ main article {
   -webkit-appearance: none;
   height: 1em;
   width: 1em;
-  background: url("{{ site.url }}/assets/img/circle-xmark.svg") no-repeat center;
+  background: url("{{ site.baseurl }}/assets/img/circle-xmark.svg") no-repeat
+    center;
 }
 
 #search > button {
