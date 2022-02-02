@@ -25,15 +25,24 @@
         <div id="search">
           <input type="search" placeholder="Search..." />
           <button>
-            <img src="/assets/img/magnifying-glass.svg" alt="search" />
+            <img
+              src="{{ site.url }}/assets/img/magnifying-glass.svg"
+              alt="search"
+            />
           </button>
           <div id="search-results">
-            <button><img src="/assets/img/xmark.svg" alt="close" /></button>
+            <button>
+              <img src="{{ site.url }}/assets/img/xmark.svg" alt="close" />
+            </button>
             <div id="search-results-content"></div>
           </div>
           {% for doc in site.docs %}
           <script>
-            addKeys("{{ doc.url }}", "{{ doc.title }}", "{{ doc.tags }}");
+            addKeys(
+              "{{ site.url }}/{{ doc.url }}",
+              "{{ doc.title }}",
+              "{{ doc.tags }}"
+            );
           </script>
           {% endfor %}
           <script>
@@ -45,7 +54,7 @@
       <!-- Content -->
       {% for doc in site.docs %}
       <article>
-        <h2><a href="{{ site.url }}{{ doc.url }}">{{ doc.title }}</a></h2>
+        <h2><a href="{{ site.url }}/{{ doc.url }}">{{ doc.title }}</a></h2>
         <div class="subtitle">
           <p class="category"><strong>Category:</strong> {{ doc.category }}</p>
           <p class="tags"><strong>Tags:</strong> {{ doc.tags }}</p>
@@ -54,7 +63,7 @@
           </p>
         </div>
         {{ doc.content | strip_html | truncatewords: 50 }}
-        <a href="{{ site.url }}{{ doc.url }}">See more...</a>
+        <a href="{{ site.url }}/{{ doc.url }}">See more...</a>
         {% if forloop.last %} {% else %}
         <hr />
         {% endif %}
