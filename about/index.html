@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FreeFEM examples</title>
+
+    <link rel="stylesheet" href="/FreeFem-examples-site/assets/css/index.css" />
+<link rel="stylesheet" href="/FreeFem-examples-site/assets/css/vs.css" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link
+  rel="icon"
+  type="image/svg"
+  href="/FreeFem-examples-site/assets/img/symbol_FreeFEM_128x128.svg"
+/>
+
+<!-- Github -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Font awesome -->
+<!-- <script
+  async
+  defer
+  src="https://kit.fontawesome.com/7924810761.js"
+  crossorigin="anonymous"
+></script> -->
+
+<!-- Categories -->
+<script src="/FreeFem-examples-site/assets/js/categories.js"></script>
+
+<!-- Fuse -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
+<!-- Search -->
+<script src="/FreeFem-examples-site/assets/js/search.js"></script>
+
+<!-- MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  defer
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"],
+      ],
+    },
+  };
+</script>
+
+
+  </head>
+  <body>
+    <header>
+  <img src="/FreeFem-examples-site/assets/img/logo_FreeFEM.svg" alt="FreeFEM logo" onclick="window.location.href='/FreeFem-examples-site'">
+  <h1>Examples</h1>
+
+  <a class="github-button" href="https://github.com/FreeFEM/FreeFem-sources" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star FreeFEM/FreeFem-sources on GitHub">Star</a>
+</header>
+
+    <main>
+      <div class="filters">
+        <!-- Categories -->
+        <div id="categories">
+          
+          <script>
+            addCategory("Solver");
+          </script>
+          
+          <script>
+            setCategories();
+          </script>
+        </div>
+
+        <!-- Search -->
+        <div id="search">
+          <input type="search" placeholder="Search...">
+          <button>
+            <img src="/FreeFem-examples-site/assets/img/magnifying-glass.svg" alt="search">
+          </button>
+          <div id="search-results">
+            <button>
+              <img src="/FreeFem-examples-site/assets/img/xmark.svg" alt="close">
+            </button>
+            <div id="search-results-content"></div>
+          </div>
+          
+          <script>
+            addKeys(
+              "/FreeFem-examples-site/docs/solver/MUMPS",
+              "MUMPS",
+              "solver"
+            );
+          </script>
+          
+          <script>
+            initSearch();
+          </script>
+        </div>
+      </div>
+
+      <!-- Content -->
+      
+      <article>
+        <h2><a href="/FreeFem-examples-site/docs/solver/MUMPS">MUMPS</a></h2>
+        <div class="subtitle">
+          <p class="category"><strong>Category:</strong> Solver</p>
+          <p class="tags"><strong>Tags:</strong> solver</p>
+          <p class="date">
+            <strong>Date:</strong> 14 Jan 2022
+          </p>
+        </div>
+        You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...
+        <a href="/FreeFem-examples-site/docs/solver/MUMPS">See more...</a>
+         
+      </article>
+      
+    </main>
+    <footer>
+  <p>Made with <img class="emoji" title=":heart:" alt=":heart:" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" height="20" width="20"> since 1987</p>
+</footer>
+
+  </body>
+</html>

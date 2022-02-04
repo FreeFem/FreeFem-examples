@@ -1,0 +1,7 @@
+int i = 0;
+
+problem MUMPS (u, v)
+    = int2d(Th)(
+        u * v
+    )
+    ;
