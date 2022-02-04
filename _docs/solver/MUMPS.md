@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "MUMPS"
-date: 2022-01-14 11:37:16 +0100
+date: 2022-01-14
 category: Solver
 tag: solver
 ---

@@ -59,7 +59,7 @@
           <p class="category"><strong>Category:</strong> {{ doc.category }}</p>
           <p class="tags"><strong>Tags:</strong> {{ doc.tags }}</p>
           <p class="date">
-            <strong>Data:</strong> {{ doc.date | date_to_string }}
+            <strong>Date:</strong> {{ doc.date | date_to_string }}
           </p>
         </div>
         {{ doc.content | strip_html | truncatewords: 50 }}
